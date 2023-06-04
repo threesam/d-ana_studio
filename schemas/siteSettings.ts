@@ -1,8 +1,7 @@
 export default {
   name: 'siteSettings',
   type: 'document',
-  title: 'Site Settings',
-  // __experimental_actions: [/*'create',*/ 'update', /*'delete',*/ 'publish'],
+  __experimental_actions: [/*'create',*/ 'update', /*'delete',*/ 'publish'],
   fields: [
     {
       name: 'title',
@@ -11,7 +10,6 @@ export default {
     {
       name: 'image',
       type: 'image',
-      title: 'Site Image',
       description: 'main branding',
     },
     {
@@ -37,6 +35,11 @@ export default {
           type: 'image',
         },
       ],
+    },
+    {
+      name: 'founder',
+      type: 'reference',
+      to: [{type: 'person'}],
     },
   ],
 }
