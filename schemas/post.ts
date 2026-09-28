@@ -50,8 +50,8 @@ export default defineType({
   preview: {
     select: {
       title: 'title',
-      author: 'author.name',
-      media: 'mainImage',
+      author: 'person.name',
+      media: 'image',
     },
     prepare(selection) {
       const {author} = selection
