@@ -83,6 +83,14 @@ export default defineType({
               type: 'string',
               validation: (rule) => rule.required().warning('Every photograph needs a description'),
             }),
+            defineField({
+              name: 'video',
+              title: 'Video',
+              description:
+                'When this is set, the photograph is the still shown before the video plays.',
+              type: 'file',
+              options: {accept: 'video/mp4'},
+            }),
           ],
         }),
       ],
