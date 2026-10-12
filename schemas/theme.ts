@@ -13,6 +13,18 @@ export default defineType({
       options: {source: 'title', maxLength: 96},
       validation: (rule) => rule.required(),
     }),
-    defineField({name: 'description', type: 'text', rows: 3}),
+    defineField({
+      name: 'description',
+      description: 'A sentence that opens the theme page. Shown on the site.',
+      type: 'text',
+      rows: 3,
+    }),
+    defineField({
+      name: 'note',
+      title: 'Working note',
+      description: 'How the import decided what belongs here. Not shown.',
+      type: 'text',
+      rows: 3,
+    }),
   ],
 })
