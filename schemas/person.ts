@@ -23,7 +23,21 @@ export default defineType({
     {
       name: 'imageGallery',
       type: 'array',
-      of: [{type: 'image', name: 'image'}],
+      of: [
+        {
+          type: 'image',
+          name: 'image',
+          fields: [
+            {
+              name: 'alt',
+              title: 'Alt text',
+              type: 'string',
+              description:
+                'Describe the photo for screen readers. Leave empty if it is purely decorative.',
+            },
+          ],
+        },
+      ],
     },
     {
       name: 'bio',
